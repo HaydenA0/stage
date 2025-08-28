@@ -1,0 +1,96 @@
+/* assets/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --flight-white-glass: rgba(248, 250, 252, 0.75);
+    --sky-blue-light: #e0f7fa;
+    --horizon-blue: #00bcd4;
+    --airline-blue: #0277bd;
+    --deep-navy: #0F1D2C;
+    --cloud-grey: #607d8b;
+    --success-green: #4CAF50;
+    --error-red: #d32f2f;
+    --background-overlay-color: rgba(15, 29, 44, 0.6);
+}
+
+body {
+    /* Correct background image restored */
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1307297.jpg&f=1&nofb=1&ipt=34f3cd12f7901a8655a013a1782b06da0cdb4230c4bd8184dc432eb34e64dd21');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: var(--deep-navy);
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+/* Pseudo-element for the background overlay for text readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(15, 29, 44, 0.4), rgba(15, 29, 44, 0.7));
+    z-index: -1;
+}
+
+.navbar {
+    background: var(--flight-white-glass) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand {
+    color: var(--airline-blue) !important;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.card {
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-body, .list-group-item {
+    background-color: var(--flight-white-glass);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.card-header {
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: var(--airline-blue) !important;
+    color: white !important;
+}
+
+.kpi-card-header {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cloud-grey);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.kpi-card .display-4 {
+    font-weight: 700;
+    color: var(--deep-navy);
+}
+.kpi-change-positive { color: var(--success-green); }
+.kpi-change-negative { color: var(--error-red); }
+.kpi-change-neutral { color: var(--cloud-grey); }
+
+.alert { font-size: 1.1rem; font-weight: 600; }
+.alert-heading { font-size: 1.3rem; font-weight: 700; }
+
+.btn-outline-primary { color: var(--airline-blue); border-color: var(--airline-blue); }
+.btn-outline-primary:hover, .btn-outline-primary.active { background-color: var(--airline-blue); color: white; }
+
+.custom-tabs-container .nav-tabs { border-bottom: 2px solid var(--horizon-blue); }
+.custom-tab.nav-link { background-color: transparent; border: none; padding: 12px 18px; margin-right: 5px; font-weight: 600; transition: all 0.2s ease; border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem; color: white !important; }
+.custom-tab.nav-link.active { background-color: var(--flight-white-glass) !important; color: var(--airline-blue) !important; border: none; border-bottom: 2px solid var(--airline-blue) !important; transform: translateY(-2px); }
+.custom-tab.nav-link:hover:not(.active) { background-color: rgba(2, 119, 189, 0.2); color: white !important; }
+.tab-content { background-color: transparent; padding-top: 1.5rem; }
