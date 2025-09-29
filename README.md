@@ -2,4 +2,4 @@
 
 
 # Interface and stuff 
-![./images/main_interface.png]
+![Main Page](./images/main_interface.png)
